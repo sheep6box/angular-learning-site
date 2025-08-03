@@ -14,6 +14,8 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
+            "outputPath": "dist/angular-learning-site",
+            "index": "src/index.html",
             "polyfills": [
               "zone.js"
             ],
@@ -29,7 +31,8 @@
             "styles": [
               "src/custom-theme.scss",
               "src/styles.css"
-            ]
+            ],
+            "baseHref": "/"
           },
           "configurations": {
             "production": {
@@ -88,6 +91,9 @@
               "src/styles.css"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
